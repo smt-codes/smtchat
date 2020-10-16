@@ -6,6 +6,7 @@ var audio = new Audio('audio.mp3');
 
 const user = prompt("Enter Your Name");
 socket.emit('new-user-join', user);
+txt.focus();
 
 const append = (sender, message, position) => {
     messageElement = document.createElement('div');
