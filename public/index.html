@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="/script.js"></script>
+</head>
+
+<body style="background-color:#dffff4;">
+    <div class="container-fluid font-weight-bold">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-12" style="min-height: 92vh; height: 92vh; margin-top: 4vh;">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h2 class="text-center">Smt Chat</h2>
+                    </div>
+                    <div class="card-body overflow-auto " id="container">
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-sm-10 col-9">
+                                <input type="text" id="txt_message" class="form-control">
+                            </div>
+                            <div class="col-sm-2 col-3  text-center">
+                                <button type="button" id="btn_send" style=" border: none; border-radius: 50%; height: 35px; width: 38px; padding: 0px; background-color:tomato;"><img src="send.png"  style="height: 35px; margin: none; background-color: none;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

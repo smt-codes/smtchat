@@ -1,0 +1,16 @@
+{
+    "name": "smtchat",
+    "version": "1.0.0",
+    "description": "Simple Chat Application by Smit Bosamiya",
+    "main": "index.js",
+    "scripts": {
+        "serve": "nodemon index.js"
+    },
+    "author": "Smit Bosamiya",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "nodemon": "^2.0.5",
+        "socket.io": "^2.3.0"
+    }
+}
