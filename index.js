@@ -17,7 +17,6 @@ io.on('connection', socket => {
     socket.on('new-user-join', user => {
         users[socket.id] = user;
         socket.broadcast.emit('user-joined', user);
-        console.log('ne user ' + user);
     });
 
     socket.on('send', message => {
