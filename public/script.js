@@ -2,11 +2,17 @@ const socket = io();
 
 const txt = document.getElementById('txt_message');
 const container = document.getElementById('container');
+const ac = document.getElementById('active_users');
+
 var audio = new Audio('audio.mp3');
 
 const user = prompt("Enter Your Name");
 socket.emit('new-user-join', user);
 txt.focus();
+
+const update_list = (active_users) => {
+    ac.innerHTML = active_users;
+}
 
 const append = (sender, message, position) => {
     messageElement = document.createElement('div');
@@ -54,6 +60,7 @@ document.getElementById('btn_send').onclick = () => {
 socket.on('user-joined', newuser => {
     append('', newuser + ' Joined the Chat', 'left');
     bottom();
+    socket.emit('get_users', '');
 });
 
 socket.on('receive', data => {
@@ -64,4 +71,8 @@ socket.on('receive', data => {
 socket.on('left', data => {
     append('', data.user + ' Left From Chat', 'left');
     bottom();
+});
+
+socket.on('recevied_active_users', user_list => {
+    ac.innerHTML = user_list;
 });
